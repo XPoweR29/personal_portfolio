@@ -4,7 +4,6 @@ interface NavLink {
     href: string;
     label: string;
     active: boolean;
-    className?: string;
 }
 
 export const useNavLinks = () => {
