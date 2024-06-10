@@ -1,0 +1,16 @@
+.layout {
+	display: flex;
+
+	.sideBar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-basis: 15%;
+		background-color: rgb(228, 228, 228);
+		box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+	}
+
+	.mainContent {
+		flex-basis: 85%;
+	}
+}
