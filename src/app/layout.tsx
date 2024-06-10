@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import styles from "./App.module.scss";
 import { SideBar } from "@/components/SideBar/SideBar";
+import { ContextProvider } from "@/context/AppContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +20,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${inter.className} ${styles.layout}`}>
-				<aside className={styles.sideBar}>
-					<SideBar />
-				</aside>
-				<main className={styles.mainContent}>{children}</main>
+				<ContextProvider>
+					<aside className={styles.sideBar}>
+						<SideBar />
+					</aside>
+					<main className={styles.mainContent}>{children}</main>
+				</ContextProvider>
 			</body>
 		</html>
 	);
