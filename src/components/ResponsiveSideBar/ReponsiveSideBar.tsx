@@ -10,19 +10,24 @@ export const ResponsiveSideBar = () => {
 	const { isSideBarOpen, setIsSideBarOpen } = useContext(AppContext)!;
 	const { breakpoint } = useBreakpoints();
 	const [isClosing, setIsClosing] = useState(false);
+    const [toggleBlock, setToggleBlock] = useState(false);
 
 	useEffect(() => {
 		if (!isSideBarOpen && isClosing) {
 			const timer = setTimeout(() => {
 				setIsClosing(false);
-			}, 500);
+                setToggleBlock(false);
+			}, 300);
 
 			return () => clearTimeout(timer);
 		}
+        if(isSideBarOpen) setToggleBlock(false);
         return undefined;
 	}, [isSideBarOpen, isClosing]);
 
 	const handleToggle = () => {
+        if(toggleBlock) return;
+        setToggleBlock(true);
 		if (isSideBarOpen) {
 			setIsClosing(true);
 		}
