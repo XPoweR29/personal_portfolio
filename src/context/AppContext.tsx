@@ -2,13 +2,16 @@
 import { Breakpoints } from "@/types/breakpoints";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
-type AppContextType = {
+interface AppContextType {
 	breakpoint: Breakpoints;
+	isSideBarOpen: boolean;
+	setIsSideBarOpen: (shown: boolean) => void; // eslint-disable-line no-unused-vars
 };
 
 export const AppContext = createContext<AppContextType | null>(null);
 
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
+	const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 	const [breakpoint, setBreakpoint] = useState<Breakpoints>({
 		sm: false,
 		md: false,
@@ -39,6 +42,9 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 	// declare type for all these vars in AppContextType!
 	const contextValues = {
 		breakpoint,
+		isSideBarOpen,
+		setIsSideBarOpen,
+
 	}
 
 	return <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>;

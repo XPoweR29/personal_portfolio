@@ -1,0 +1,7 @@
+@import "../sass/mixins";
+@import "../sass/variables";
+
+.home {
+	@include subpage;
+	width: 100%;
+}

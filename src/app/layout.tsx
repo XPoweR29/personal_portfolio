@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
-import styles from "./App.module.scss";
-import { SideBar } from "@/components/SideBar/SideBar";
 import { ContextProvider } from "@/context/AppContext";
+import { ResponsiveSideBar } from "@/components/ResponsiveSideBar/ReponsiveSideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +16,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+
 	return (
 		<html lang="en">
-			<body className={`${inter.className} ${styles.layout}`}>
+			<body className={`${inter.className} ${"layout"}`}>
 				<ContextProvider>
-					<aside className={styles.sideBar}>
-						<SideBar />
-					</aside>
-					<main className={styles.mainContent}>{children}</main>
+					<ResponsiveSideBar/>
+					<main className="mainContent">{children}</main>
 				</ContextProvider>
 			</body>
 		</html>
