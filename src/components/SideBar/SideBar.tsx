@@ -3,16 +3,13 @@
 import Link from "next/link";
 import styles from "./SideBar.module.scss";
 import { useNavLinks } from "@/hooks/useNavLinks";
-import { MutableRefObject, useContext } from "react";
-import { AppContext } from "@/context/AppContext";
 
 interface Props {
 	className?: string;
-	reference?: MutableRefObject<HTMLElement | null>;
+	toggleSidebar?: () => void;
 }
 
-export const SideBar = ({className}: Props) => {
-	const {setIsSideBarOpen} = useContext(AppContext)!;
+export const SideBar = ({className, toggleSidebar}: Props) => {
 	const navLinks = useNavLinks();
 
 	return (
@@ -22,7 +19,7 @@ export const SideBar = ({className}: Props) => {
 					<Link
 						key={href}
 						href={href}
-						onClick={()=>setIsSideBarOpen(false)}
+						onClick={toggleSidebar}
 						className={`${styles["nav__link"]} 
 					${active && styles["nav__link--active"]}`}>
 						{label}

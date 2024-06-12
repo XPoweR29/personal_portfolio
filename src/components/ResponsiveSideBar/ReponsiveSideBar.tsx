@@ -34,7 +34,6 @@ export const ResponsiveSideBar = () => {
 		setIsSideBarOpen(!isSideBarOpen);
 	};
 
-    //FIXME: Too fast clicking causes problems with button.
 	return (
 		<>
 			{breakpoint.md ? (
@@ -43,7 +42,7 @@ export const ResponsiveSideBar = () => {
 				<>
 					<BurgerBtn toggleSideBar={handleToggle} />
 					{(
-						<SideBar className={`${styles.sidebar} ${isSideBarOpen && !isClosing ? styles.opened : isClosing ? styles.closing : ""}`} />
+						<SideBar className={`${styles.sidebar} ${isSideBarOpen && !isClosing ? styles.opened : isClosing ? styles.closing : ""}`} toggleSidebar={handleToggle}/>
 					)}
 				</>
 			)}
