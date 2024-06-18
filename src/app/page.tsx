@@ -5,17 +5,19 @@ import { Icon } from "@iconify/react";
 import photo_2 from "../assets/photo_2.png";
 import atomic from "../assets/atomic.png";
 import styles from "./Home.module.scss";
+import { rubikGlitch } from "./fonts";
 
 const App = () => {
+
 	return (
-		//FIXME: Add proper buttons action.
 		<div className={styles.home}>
 			<Wrapper className={styles.wrapper}>
 				<img className={styles.atomic} src={atomic.src} alt="" />
 
 				<h1 className={styles.heading}>
-					Hello, my name is <span>Paweł.</span> <br /> I'm a{" "}
-					<span>Web Developer</span>
+					Hello, my name is{" "}
+					<strong className={rubikGlitch.className}>Paweł.</strong> <br /> I'm a{" "}
+					<strong className={rubikGlitch.className}>Web Developer</strong>
 				</h1>
 				<p className={styles.text}>
 					I create and optimize web applications, ensuring top performance and
@@ -37,7 +39,7 @@ const App = () => {
 					</SocialBtn>
 				</div>
 
-				<img className={styles.photo} alt="personal photo" src={photo_2.src}/>
+				<img className={styles.photo} alt="personal photo" src={photo_2.src} />
 			</Wrapper>
 		</div>
 	);

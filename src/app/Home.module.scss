@@ -16,6 +16,10 @@
 
 	.heading {
 		@include heading;
+
+		strong:last-of-type {
+			color: $mainColor;
+		}
 	}
 
 	.text {
@@ -48,5 +52,15 @@
 		left: 0;
 		width: 100%;
 		animation: scaling-rotate 90s infinite linear;
+	}
+}
+
+@media (min-width: 360px) {
+	.home {
+		// padding-top: 10em;
+
+		.photo {
+			width: 220px;
+		}
 	}
 }
