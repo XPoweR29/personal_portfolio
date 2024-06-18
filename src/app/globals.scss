@@ -1,10 +1,12 @@
 @import "../sass/reset";
 @import "../sass/hamburger";
 @import "../sass/animations";
+@import "../sass/variables";
 
 body {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	min-width: 320px;
+	color: $fontColor-dark;
 }
 
 .layout {

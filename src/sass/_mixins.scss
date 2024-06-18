@@ -1,3 +1,11 @@
 @mixin subpage {
     padding-top: 7em;
 }
+
+@mixin heading {
+    font-size: 1.7em;
+}
+
+@mixin text {
+    margin-top: 1.2em;
+}

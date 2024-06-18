@@ -15,19 +15,18 @@ export const MainContent = ({ className, children: page }: Props) => {
 		setChangingPage(true);
 		const timer = setTimeout(() => {
 			setChangingPage(false);
-
 		}, 700);
 
 		return () => clearTimeout(timer);
 	}, [pathname]);
-
+	//FIXME: Implement proper <Loader/>
 	return (
 		<main className={className}>
 			<main className={className}>
 				{changingPage ? (
 					<div className={`${"page"} ${"contentEnter"}`}>{page}</div>
 				) : (
-					<div className={"page"}>{changingPage ? null : page}</div>
+					<div className={"page"}>{changingPage ? "...LOADING..." : page}</div>
 				)}
 			</main>
 		</main>
