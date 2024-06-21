@@ -5,6 +5,7 @@ import { SideBar } from "../SideBar/SideBar";
 import { BurgerBtn } from "../BurgerBtn/BurgerBtn";
 import { AppContext } from "@/context/AppContext";
 import styles from "./ResponsiveSideBar.module.scss";
+import { LoaderContainer } from "../LoaderContainer/LoaderContainer";
 
 export const ResponsiveSideBar = () => {
 	const { isSideBarOpen, setIsSideBarOpen } = useContext(AppContext)!;
@@ -35,8 +36,8 @@ export const ResponsiveSideBar = () => {
 	};
 
 	return (
-		<>
-			{breakpoint.md ? (
+		<LoaderContainer>
+			{breakpoint.lg ? (
 				<SideBar className={styles.sidebar} />
 			) : (
 				<>
@@ -46,6 +47,6 @@ export const ResponsiveSideBar = () => {
 					)}
 				</>
 			)}
-		</>
+		</LoaderContainer>
 	);
 };

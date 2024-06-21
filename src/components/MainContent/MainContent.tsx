@@ -1,11 +1,12 @@
 "use client";
+
 import { usePathname } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
 
 interface Props {
 	className?: string;
 	children: ReactNode;
-};
+}
 
 export const MainContent = ({ className, children: page }: Props) => {
 	const pathname = usePathname();
@@ -19,16 +20,14 @@ export const MainContent = ({ className, children: page }: Props) => {
 
 		return () => clearTimeout(timer);
 	}, [pathname]);
-	//FIXME: Implement proper <Loader/>
+
 	return (
 		<main className={className}>
-			<main className={className}>
 				{changingPage ? (
 					<div className={`${"page"} ${"contentEnter"}`}>{page}</div>
 				) : (
-					<div className={"page"}>{changingPage ? "...LOADING..." : page}</div>
+					<div className={"page"}>{changingPage ? null : page}</div>
 				)}
-			</main>
 		</main>
 	);
 };
