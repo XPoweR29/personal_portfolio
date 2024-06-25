@@ -1,0 +1,41 @@
+@import "../../sass/mixins";
+
+.pallete {
+    position: absolute;
+    bottom: 10%;
+	display: flex;
+	flex-direction: column;
+    align-self: center;
+    gap: 1em;
+	width: fit-content;
+	padding: 1em;
+    transform: translateX(-150%);
+    border-radius: 10px;
+	background-color: var(--background-gradient-1);
+    box-shadow: 0px 0px 10px #c4c4c41a;
+    transition: transform 0.5s;
+
+    &--open {
+        transform: translateX(0);
+    }
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		.color {
+			height: 25px;
+			width: 25px;
+			border-radius: 50%;
+			scale: 1;
+			cursor: pointer;
+			transition: scale 0.2s;
+
+			&:hover {
+				scale: 1.15;
+			}
+		}
+	}
+}

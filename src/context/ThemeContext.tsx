@@ -5,15 +5,15 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 interface ContextType {
 	theme: string;
 	toggleTheme: () => void;
+    palleteOpen: boolean;
+    setPalleteOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const ThemeContext = createContext<ContextType>({
-	theme: "light",
-	toggleTheme: () => {},
-});
+export const ThemeContext = createContext<ContextType | null>(null);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const [theme, setTheme] = useState<string>("light");
+	const [palleteOpen, setPalleteOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const storedTheme = localStorage.getItem("theme");
@@ -35,6 +35,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	};
 
 	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
+		<ThemeContext.Provider value={{ theme, toggleTheme, palleteOpen, setPalleteOpen }}>{children}</ThemeContext.Provider>
 	);
 };

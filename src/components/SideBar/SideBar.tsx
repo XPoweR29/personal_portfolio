@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./SideBar.module.scss";
 import { useNavLinks } from "@/hooks/useNavLinks";
 import { ToolBtns } from "../ToolBtns/ToolBtns";
+import { ColorPallete } from "../ColorPallete/ColorPallete";
 
 interface Props {
 	className?: string;
@@ -28,8 +29,10 @@ export const SideBar = ({className, toggleSidebar}: Props) => {
 				))}
 			</nav>
 
-			<ToolBtns/>
-
+			<ToolBtns />
+			<ColorPallete
+				colors={["#ff4336", "#c7ac16", "#269483", "royalblue", "#b44fb1"]}
+			/>
 		</aside>
 	);
 };

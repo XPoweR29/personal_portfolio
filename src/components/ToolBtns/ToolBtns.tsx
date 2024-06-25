@@ -8,16 +8,31 @@ interface Props {
 }
 
 export const ToolBtns = ({ className }: Props) => {
-	const { theme, toggleTheme } = useContext(ThemeContext);
+	const { theme, toggleTheme, palleteOpen, setPalleteOpen } =
+		useContext(ThemeContext)!;
+
+	const handlePallete = () => {
+		setPalleteOpen((isOpen) => !isOpen);
+	};
 
 	return (
 		<div className={`${styles.toolBtns} ${className}`}>
-			<button onClick={toggleTheme}>
-				<Icon icon={theme === "light" ? "tabler:moon-filled" : "bxs:sun"} />
+			<button className={styles.toggleBtn} onClick={toggleTheme}>
+				<div className={`${styles.iconsContainer} ${styles[theme]}`}>
+					<div className={styles.icon}>
+						<Icon icon={"tabler:moon-filled"} />
+					</div>
+					<div className={styles.icon}>
+						<Icon icon={"bxs:sun"} />
+					</div>
+				</div>
 			</button>
 
-			<button>
-				<Icon icon="weui:setting-filled" />
+			<button className={styles.colorBtn} onClick={handlePallete}>
+				<Icon
+					icon="weui:setting-filled"
+					className={`${styles.icon} ${palleteOpen && styles.rotated}`}
+				/>
 			</button>
 		</div>
 	);
