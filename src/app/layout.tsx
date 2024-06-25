@@ -1,13 +1,11 @@
-"use client";
-
 import "./globals.scss";
 import { ContextProvider } from "@/context/AppContext";
 import { ResponsiveSideBar } from "@/components/ResponsiveSideBar/ReponsiveSideBar";
 import { MainContent } from "@/components/MainContent/MainContent";
 import { poppins } from "./fonts";
 import { LoaderContainer } from "@/components/LoaderContainer/LoaderContainer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-//IMPROVE: Implement dark/light theme at right...
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -20,14 +18,16 @@ export default function RootLayout({
 				<link rel="preload" href="/assets/photo_2.png" as="image" />
 			</head>
 
-			<body className={`${poppins.className} ${"layout"}`}>
-				<LoaderContainer>
-					<ContextProvider>
-						<ResponsiveSideBar />
-						<MainContent className="mainContent">{children}</MainContent>
-					</ContextProvider>
-				</LoaderContainer>
-			</body>
+			<ThemeProvider>
+				<body className={`${poppins.className} ${"layout"}`}>
+					<LoaderContainer>
+						<ContextProvider>
+							<ResponsiveSideBar />
+							<MainContent className="mainContent">{children}</MainContent>
+						</ContextProvider>
+					</LoaderContainer>
+				</body>
+			</ThemeProvider>
 		</html>
 	);
 }
