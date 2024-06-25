@@ -44,7 +44,6 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 		breakpoint,
 		isSideBarOpen,
 		setIsSideBarOpen,
-
 	}
 
 	return <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>;

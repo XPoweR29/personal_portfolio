@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "./SideBar.module.scss";
 import { useNavLinks } from "@/hooks/useNavLinks";
+import { ToolBtns } from "../ToolBtns/ToolBtns";
 
 interface Props {
 	className?: string;
@@ -26,6 +27,9 @@ export const SideBar = ({className, toggleSidebar}: Props) => {
 					</Link>
 				))}
 			</nav>
+
+			<ToolBtns/>
+
 		</aside>
 	);
 };
