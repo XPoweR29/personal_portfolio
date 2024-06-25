@@ -3,24 +3,24 @@
 .btn {
 	position: relative;
 	padding: 1em 1.2em;
-	border: 2px solid $mainColor;
+	border: 2px solid var(--main-color);
 	border-radius: 5px;
 	font-weight: bold;
-	color: $fontColor-dark;
+	color: var(--font-color);
 	background-color: transparent;
 	overflow: hidden;
     scale: 1;
-    transition: backround-color 0.3s, color 0.3s, scale 0.3s;
+    transition: background-color 0.3s, color 0.3s, scale 0.3s;
 
     &:hover {
-        background-color: $mainColor;
-        color: $asideBg-light;
+        background-color: var(--main-color);
+        color: var(--aside-background);
         scale: 0.95;
     }
 
 	&--filled {
-		color: $asideBg-light;
-		background-color: $mainColor;
+		color: var(--aside-background);
+		background-color: var(--main-color);
 
 		&::after {
 			content: "";

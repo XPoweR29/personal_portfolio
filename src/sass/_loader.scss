@@ -3,7 +3,7 @@
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px dotted $mainColor;
+  border: 5px dotted var(--main-color);
   border-radius: 50%;
   display: inline-block;
   position: relative;

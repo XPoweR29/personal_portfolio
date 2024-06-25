@@ -1,5 +1,18 @@
-$mainBg_1-light: #E7E7FE;
-$mainBg_2-light: #F4F4FE;
-$asideBg-light: #FEFAFF;
-$mainColor: #FF4336;
-$fontColor-dark: #33385D;
+//light-theme
+$background-gradient-1-light: #e7e7fe;
+$background-gradient-2-light: #f4f4fe;
+$aside-background-light: #fefaff;
+$font-color-light: #33385d;
+
+//dark-theme
+$background-gradient-1-dark: #333333;
+$background-gradient-2-dark: #444444;
+$aside-background-dark: #222222;
+$font-color-dark: #e7e7e7;
+
+//accent-colors
+$accent-color-1: #ff4336; 
+$accent-color-2: #c7ac16; 
+$accent-color-3: #269483; 
+$accent-color-4: royalblue; 
+$accent-color-5: rgb(180, 79, 177); 

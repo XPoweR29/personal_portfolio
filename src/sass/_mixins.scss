@@ -1,11 +1,29 @@
+@import "./variables";
+
+@mixin light-theme {
+	--background-gradient-1: #{$background-gradient-1-light};
+	--background-gradient-2: #{$background-gradient-2-light};
+	--aside-background: #{$aside-background-light};
+	--main-color: var(--dynamic-accent-color, #{$accent-color-3});
+	--font-color: #{$font-color-light};
+}
+
+@mixin dark-theme {
+	--background-gradient-1: #{$background-gradient-1-dark};
+	--background-gradient-2: #{$background-gradient-2-dark};
+	--aside-background: #{$aside-background-dark};
+	--main-color: var(--dynamic-accent-color, #{$accent-color-1});
+	--font-color: #{$font-color-dark};
+}
+
 @mixin subpage {
-    padding-top: 7em;
+	padding-top: 7em;
 }
 
 @mixin heading {
-    font-size: 1.7em;
+	font-size: 1.7em;
 }
 
 @mixin text {
-    margin-top: 1.2em;
+	margin-top: 1.2em;
 }

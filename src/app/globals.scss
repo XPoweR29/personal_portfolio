@@ -1,13 +1,22 @@
 @import "../sass/reset";
 @import "../sass/hamburger";
 @import "../sass/animations";
-@import "../sass/variables";
 @import "../sass/loader";
+@import "../sass/variables";
+@import "../sass/mixins";
 
 body {
 	font-size: 1.4rem;
 	min-width: 320px;
-	color: $fontColor-dark;
+	color: var(--font-color);
+
+	&.light {
+		@include light-theme;
+	}
+
+	&.dark {
+		@include dark-theme;
+	}
 }
 
 .layout {

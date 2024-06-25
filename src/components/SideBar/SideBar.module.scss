@@ -1,25 +1,27 @@
+@import "../../sass/variables";
+
 .nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    gap: 2em;
+	gap: 2em;
 
-    &__link {
-        color: gray;
-        scale: 1;
-        transition: color 0.1s, scale 0.1s;
+	&__link {
+		color: gray;
+		scale: 1;
+		transition: color 0.1s, scale 0.1s;
 
-        &:hover {
-            color: royalblue;
-            scale: 1.1;
-            font-weight: bold;
-        }
+		&:hover {
+			color: var(--main-color);
+			scale: 1.1;
+			font-weight: bold;
+		}
 
-        &--active {
-            color: royalblue;
-            scale: 1.1;
-            font-weight: bold;
-        }
-    }
+		&--active {
+			color: var(--main-color);
+			scale: 1.1;
+			font-weight: bold;
+		}
+	}
 }
