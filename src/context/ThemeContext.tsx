@@ -49,6 +49,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const changeMainColor = (color: string) => {
 		setMainColor(color);
 		localStorage.setItem("main-color", color);
+		setPalleteOpen(false);
 	};
 
 	return (
