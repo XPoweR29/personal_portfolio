@@ -4,7 +4,6 @@
 	--background-gradient-1: #{$background-gradient-1-light};
 	--background-gradient-2: #{$background-gradient-2-light};
 	--aside-background: #{$aside-background-light};
-	--main-color: var(--dynamic-accent-color, #{$accent-color-3});
 	--font-color: #{$font-color-light};
 }
 
@@ -12,7 +11,6 @@
 	--background-gradient-1: #{$background-gradient-1-dark};
 	--background-gradient-2: #{$background-gradient-2-dark};
 	--aside-background: #{$aside-background-dark};
-	--main-color: var(--dynamic-accent-color, #{$accent-color-1});
 	--font-color: #{$font-color-dark};
 }
 

@@ -31,7 +31,7 @@ export const SideBar = ({className, toggleSidebar}: Props) => {
 
 			<ToolBtns />
 			<ColorPallete
-				colors={["#ff4336", "#c7ac16", "#269483", "royalblue", "#b44fb1"]}
+				colors={["#ff4336", "#c7ac16", "#269483", "#378cd1", "#b44fb1"]}
 			/>
 		</aside>
 	);

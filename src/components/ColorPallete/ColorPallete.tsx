@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const ColorPallete = ({ colors }: Props) => {
-    const {palleteOpen} = useContext(ThemeContext)!;
+    const {palleteOpen, changeMainColor} = useContext(ThemeContext)!;
 
 	return (
 			<div className={`${styles.pallete} ${palleteOpen && styles["pallete--open"]}`}>
@@ -18,7 +18,9 @@ export const ColorPallete = ({ colors }: Props) => {
 						<div
 							className={styles.color}
 							style={{ backgroundColor: color }}
-							key={index}></div>
+							key={index}
+							onClick={()=>changeMainColor(color)}
+							></div>
 					))}
 				</div>
 			</div>

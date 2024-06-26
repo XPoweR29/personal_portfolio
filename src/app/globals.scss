@@ -5,6 +5,10 @@
 @import "../sass/variables";
 @import "../sass/mixins";
 
+:root {
+	--main-color: gray;
+}
+
 body {
 	font-size: 1.4rem;
 	min-width: 320px;
