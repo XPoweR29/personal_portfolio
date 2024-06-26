@@ -13,6 +13,7 @@ body {
 	font-size: 1.4rem;
 	min-width: 320px;
 	color: var(--font-color);
+	transition: color 0.5s;
 
 	&.light {
 		@include light-theme;

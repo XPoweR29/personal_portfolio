@@ -3,9 +3,13 @@ $background-gradient-1-light: #e7e7fe;
 $background-gradient-2-light: #f4f4fe;
 $aside-background-light: #fefaff;
 $font-color-light: #33385d;
+$main-shadow-light: rgba(0, 0, 0, 0.4);
+$aside-shadow-light: rgba(0, 0, 0, 0.4);
 
 //dark-theme
 $background-gradient-1-dark: #333333;
 $background-gradient-2-dark: #444444;
 $aside-background-dark: #222222;
 $font-color-dark: #e7e7e7;
+$main-shadow-dark: rgba(0, 0, 0);
+$aside-shadow-dark: rgba(0, 0, 0, 0.3);

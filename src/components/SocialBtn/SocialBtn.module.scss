@@ -9,7 +9,7 @@
 	border: 2px solid var(--main-color);
 	border-radius: 50%;
 	scale: 1;
-	transition: scale 0.2s;
+	transition: scale 0.2s, border-color 0.3s;
 
 	svg {
 		width: 25px;

@@ -5,6 +5,8 @@
 	--background-gradient-2: #{$background-gradient-2-light};
 	--aside-background: #{$aside-background-light};
 	--font-color: #{$font-color-light};
+	--main-shadow: #{$main-shadow-light};
+	--aside-shadow: #{$aside-shadow-light};
 }
 
 @mixin dark-theme {
@@ -12,6 +14,8 @@
 	--background-gradient-2: #{$background-gradient-2-dark};
 	--aside-background: #{$aside-background-dark};
 	--font-color: #{$font-color-dark};
+	--main-shadow: #{$main-shadow-dark};
+	--aside-shadow: #{$aside-shadow-dark};
 }
 
 @mixin subpage {
