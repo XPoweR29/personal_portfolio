@@ -17,7 +17,7 @@ const App = () => {
 
 	return (
 		<LoaderContainer>
-			<div className={styles.home}>
+			<section className={styles.home}>
 				<Wrapper className={styles.wrapper}>
 					<img className={styles.atomic} src={atomic.src} alt="" />
 
@@ -55,7 +55,7 @@ const App = () => {
 						/>
 					</div>
 				</Wrapper>
-			</div>
+			</section>
 		</LoaderContainer>
 	);
 };
