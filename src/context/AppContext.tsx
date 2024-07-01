@@ -1,5 +1,5 @@
 "use client"
-import { Breakpoints } from "@/types/breakpoints";
+import { Breakpoints } from "@/types/types";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface AppContextType {
