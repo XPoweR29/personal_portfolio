@@ -4,4 +4,8 @@ export interface Breakpoints {
 	lg: boolean;
 	xl: boolean;
 	xxl: boolean;
+};
+
+export interface ContentMap {
+	[key: string]: React.ReactNode;
 }
