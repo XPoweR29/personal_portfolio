@@ -2,7 +2,142 @@
 @import "../../sass/mixins";
 
 .about {
-    background-color: var(--background-gradient-1);
-    height: 100%;
-    border: 2px solid black;
+	position: relative;
+	height: fit-content;
+	min-height: 100%;
+	padding-top: 6em;
+	background-color: var(--background-gradient-1);
+	overflow: hidden;
+	transition: background-color 0.5s;
+
+	.wrapper {
+		position: relative;
+		z-index: 2;
+	}
+
+	.wavesImg {
+		position: absolute;
+		height: 100%;
+		top: -160px;
+		left: -80px;
+		rotate: 120deg;
+		filter: invert(1);
+		opacity: 0.2;
+		pointer-events: none;
+	}
+
+	.photo {
+		position: absolute;
+		left: -60px;
+		bottom: -35px;
+        height: 40%;
+        max-height: 400px;
+        min-height: 280px;
+		transform: rotateY(180deg);
+	}
+
+	.heading {
+        @include subpageHeading;
+	}
+
+	.text {
+		@include text;
+	}
+
+	.techStack {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        max-width: 440px;
+		margin-top: 3em;
+		margin-bottom: 2em;
+		padding: 1em;
+		background-color: var(--aside-background);
+		border-radius: 10px;
+        transition: background-color 0.3s;
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 90%;
+			gap: 1em;
+			margin-top: 1em;
+
+			svg {
+				font-size: 4rem;
+			}
+		}
+	}
 }
+
+@media (min-width: 400px) {
+	.about {
+		padding-top: 10em;
+
+		.techStack {
+			margin-top: 7em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.about {
+		height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
+		.wavesImg {
+        width: 105%;
+        height: auto;
+        top: -50px;
+        left: 0px;
+        rotate: 100deg;
+		}
+
+		.wrapper {
+			position: relative;
+			height: 100%;
+		}
+
+        .heading {
+            margin-left: 0;
+        }
+
+        .cvBtn {
+            margin-top: 4em;
+        }
+
+		.techStack {
+			position: absolute;
+			bottom: 10%;
+			right: 15px;
+			width: 50%;
+			padding: 1.5em;
+
+			.title {
+				align-self: flex-start;
+			}
+		}
+	}
+}
+
+@media(min-width: 992px) {
+    .about {
+        padding-top: 3em;
+
+        .wavesImg {
+            top: -100px;
+        }
+
+        .text {
+            width: 80%;
+        }
+    }
+}   
+
+
+//FIXME: Zorbić mixina responsywności dla podstrony. Chodzi o to żeby raz zadeklatować padding top itd, i uzywać tego jako mixina. 
