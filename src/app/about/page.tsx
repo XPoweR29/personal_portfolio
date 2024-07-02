@@ -35,7 +35,7 @@ const About = () => {
 
 				<div className={styles.techStack}>
 					<h2 className={styles.title}>Tech Stack</h2>
-					<p className={styles.text}>
+					<p className={styles.txt}>
 						These are the tools and technologies I enjoy working with to build
 						my web projects:
 					</p>
