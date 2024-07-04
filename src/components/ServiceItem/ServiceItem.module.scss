@@ -1,0 +1,51 @@
+@import "../../sass/mixins";
+
+.serviceItem {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+	max-width: 280px;
+	padding: 1em;
+	background-color: var(--aside-background);
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px var(--main-shadow);
+	scale: 1;
+	transition: scale 0.3s;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 110%;
+		transform: skew(40deg);
+		translate: -125px 0px;
+		background-color: #b4b4b433;
+		background-color: var(--main-color);
+		opacity: 0.1;
+		transition: translate 0.3s;
+	}
+
+	&:hover {
+		scale: 1.05;
+
+		&::before {
+			translate: 400px 0px;
+		}
+	}
+
+	.icon {
+		font-size: 4rem;
+		@include mainColored;
+	}
+
+	.text {
+		margin-top: 1em;
+		text-align: center;
+	}
+}
