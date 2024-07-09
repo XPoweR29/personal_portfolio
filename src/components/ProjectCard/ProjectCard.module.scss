@@ -1,0 +1,107 @@
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px var(--main-shadow);
+	background-color: var(--aside-background);
+	padding: 1em;
+	overflow: hidden;
+	width: 100%;
+	max-width: 330px;
+
+	.thumbnail {
+		width: 80%;
+		align-self: flex-end;
+		margin-bottom: 0.5em;
+		z-index: 1;
+	}
+
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0.5;
+		z-index: 0;
+	}
+
+	.title {
+		font-size: 1.2em;
+		z-index: 1;
+	}
+
+	.tech {
+		z-index: 1;
+	}
+
+	&:hover {
+		.details {
+			opacity: 1;
+		}
+	}
+}
+
+.details {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 1em;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.5s;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: var(--main-color);
+		opacity: 0.8;
+		transition: background-color 0.3s;
+		z-index: -1;
+	}
+
+	h2,
+	p {
+		text-shadow: 0px 0px 5px black;
+	}
+
+	h2 {
+		margin-bottom: 0.5em;
+		font-size: 1.2em;
+	}
+
+	.links {
+		display: flex;
+		gap: 1em;
+		margin-top: auto;
+		font-size: 3rem;
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid white;
+			border-radius: 50%;
+			height: 45px;
+			width: 45px;
+			cursor: pointer;
+
+			&.demo {
+				rotate: 40deg;
+				font-size: 3.5rem;
+			}
+		}
+	}
+}
