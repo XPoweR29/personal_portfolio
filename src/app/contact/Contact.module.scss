@@ -1,0 +1,96 @@
+@import "../../sass/mixins";
+@import "../../sass/animations";
+
+.contact {
+	@include subpage;
+	position: relative;
+	overflow-x: hidden;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.heading {
+		@include subpageHeading;
+	}
+
+	.title {
+		margin-bottom: 0.5em;
+		font-weight: normal;
+	}
+
+	.text {
+		max-width: 500px;
+	}
+
+	.linkBox {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 2em 0;
+		gap: 1em;
+
+		.link {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 1em;
+            width: fit-content;
+
+			.icon {
+				font-size: 3rem;
+				color: var(--main-color);
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.netImg {
+		position: absolute;
+		top: 10px;
+		right: 0px;
+		width: 250px;
+		opacity: 0.5;
+		transform: rotateY(180deg);
+		animation: scaling 20s infinite ease-in-out;
+	}
+}
+
+@media (min-width: 500px) {
+	.contact {
+		.netImg {
+			width: 350px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		.netImg {
+			width: 450px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.contact {
+		.wrapper {
+			flex-direction: row;
+            justify-content: space-between;
+            gap: 1em;
+		}
+
+		.contentContainer {
+			flex-shrink: 1;
+		}
+
+        .netImg {
+            width: 500px;
+        }
+	}
+}

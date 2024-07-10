@@ -56,5 +56,6 @@ body {
 .contentEnter {
 	position: absolute;
 	width: 100%;
+	overflow: hidden;
 	animation: slideIn-right 0.7s ease forwards;
 }
