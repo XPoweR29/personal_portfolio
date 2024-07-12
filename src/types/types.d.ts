@@ -15,3 +15,9 @@ export interface Service {
 	text: string;
 	icon: string;
 }
+
+export interface EmailReqBody {
+	to: string;
+	subject: string;
+	text: string;
+}

@@ -37,7 +37,7 @@
 			justify-content: flex-start;
 			align-items: center;
 			gap: 1em;
-            width: fit-content;
+			width: fit-content;
 
 			.icon {
 				font-size: 3rem;
@@ -81,16 +81,16 @@
 	.contact {
 		.wrapper {
 			flex-direction: row;
-            justify-content: space-between;
-            gap: 1em;
+			justify-content: space-between;
+			gap: 1em;
 		}
 
 		.contentContainer {
 			flex-shrink: 1;
 		}
 
-        .netImg {
-            width: 500px;
-        }
+		.netImg {
+			width: 500px;
+		}
 	}
 }

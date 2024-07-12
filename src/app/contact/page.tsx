@@ -6,6 +6,7 @@ import { Form } from "@/components/Form/Form";
 import net from "../../../public/assets/net.webp";
 
 const Contact = () => {
+
 	return (
 		<section className={styles.contact}>
 			<img src={net.src} alt="" className={styles.netImg} />

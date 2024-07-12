@@ -5,6 +5,7 @@ import { MainContent } from "@/components/MainContent/MainContent";
 import { poppins } from "./fonts";
 import { LoaderContainer } from "@/components/LoaderContainer/LoaderContainer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import {Toaster} from "react-hot-toast";
 
 export default function RootLayout({
 	children,
@@ -24,6 +25,7 @@ export default function RootLayout({
 						<ContextProvider>
 							<ResponsiveSideBar />
 							<MainContent className="mainContent">{children}</MainContent>
+							<Toaster/>
 						</ContextProvider>
 					</LoaderContainer>
 				</body>
