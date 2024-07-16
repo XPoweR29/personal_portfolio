@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface Props extends LinkProps {
 	children: ReactNode;
@@ -17,6 +17,7 @@ function hold(ms: number): Promise<void> {
 }
 
 export const CustomLink = ({ children, href, toggleSidebar, ...props }: Props) => {
+	const pathname = usePathname();
 	const router = useRouter();
 
 	const handleClick = async (
@@ -24,6 +25,8 @@ export const CustomLink = ({ children, href, toggleSidebar, ...props }: Props) =
 	) => {
         toggleSidebar && toggleSidebar();
         e.preventDefault();
+		if(pathname === href) return;
+
 		document.querySelector(".mainContent")?.classList.add("transition");
 		await hold(200);
 		router.push(href);
