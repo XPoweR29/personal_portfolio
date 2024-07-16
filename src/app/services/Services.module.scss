@@ -44,6 +44,7 @@
 		gap: 3em;
 		padding: 3em 0;
 		max-width: 1000px;
+		margin: 0 auto;
 		margin-top: 3em;
 	}
 }
@@ -92,6 +93,17 @@
 				right: -210px;
 				width: 90%;
 			}
+		}
+	}
+}
+
+@media (min-width: 1400px) and (min-height: 1000px) {
+	.services {
+		display: flex;
+		align-items: center;
+
+		.wrapper {
+			height: auto;
 		}
 	}
 }

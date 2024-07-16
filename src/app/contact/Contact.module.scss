@@ -79,6 +79,7 @@
 
 @media (min-width: 992px) {
 	.contact {
+
 		.wrapper {
 			flex-direction: row;
 			justify-content: space-between;
@@ -91,6 +92,17 @@
 
 		.netImg {
 			width: 500px;
+		}
+	}
+}
+
+@media (min-width: 1400px) and (min-height: 1000px) {
+	.contact {
+		display: flex;
+		align-items: center;
+
+		.wrapper {
+			height: auto;
 		}
 	}
 }

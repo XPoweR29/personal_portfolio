@@ -3,9 +3,7 @@
 
 .about {
 	position: relative;
-
 	min-height: 100svh;
-
 	padding-top: 6em;
 	background-color: var(--background-gradient-1);
 	overflow-x: hidden;
@@ -18,9 +16,9 @@
 	.wavesImg {
 		position: absolute;
 		height: 100%;
-		top: -160px;
-		left: -80px;
-		rotate: 120deg;
+		top: -1px;
+		left: 0;
+		rotate: 180deg;
 		pointer-events: none;
 	}
 
@@ -101,21 +99,15 @@
 
 @media (min-width: 768px) {
 	.about {
-		height: 100svh;
 		height: 100%;
+		min-height: 700px;
 		overflow: hidden;
 		padding-left: 20px;
 		padding-right: 20px;
 
-		display: flex;
-		flex-direction: column;
-
 		.wavesImg {
-			width: 105%;
-			height: auto;
-			top: -50px;
-			left: 0px;
-			rotate: 100deg;
+			height: 105%;
+			left: 10%;
 		}
 
 		.wrapper {
@@ -157,11 +149,11 @@
 		padding-top: 3em;
 
 		.wavesImg {
-			top: -100px;
+			height: 110%;
 		}
 
 		.text {
-			width: 80%;
+			width: 60%;
 		}
 	}
 }

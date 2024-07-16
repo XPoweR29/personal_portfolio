@@ -8,15 +8,16 @@ import kwatery_mockup from "../../../public/assets/mockup_kwatery.png";
 import portfolio_mockup from "../../../public/assets/mockup_portfolio.png";
 import { rubikGlitch } from "../fonts";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
+import { useBreakpoints } from "@/hooks/useBreakpoints";
 
 const Projects = () => {
+	const { breakpoint } = useBreakpoints();
 
 	return (
 		<section className={styles.projects}>
 			<Wrapper className={styles.wrapper}>
-				<img src={atom.src} alt="" className={styles.atom}/>
-				<img src={atom.src} alt="" className={styles.atom}/>
-
+				<img src={atom.src} alt="" className={styles.atom} />
+				{breakpoint.sm && <img src={atom.src} alt="" className={styles.atom} />}
 				<h1 className={styles.heading}>
 					<span className={rubikGlitch.className}>P</span>rojects
 				</h1>
@@ -54,6 +55,7 @@ const Projects = () => {
 						demoUrl="#"
 						gitHubUrl="https://github.com/XPoweR29/personal_portfolio"
 					/>
+
 				</div>
 			</Wrapper>
 		</section>
