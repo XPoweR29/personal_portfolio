@@ -16,9 +16,12 @@ body {
 	min-height: 500px;
 	color: var(--font-color);
 	transition: color 0.5s;
-	background-color: var(--aside-background);
+	background-color: var(--background-gradient-1);
 	box-shadow: 20px 0px 20px -20px var(--main-shadow);
 	transition: background-color 0.5s;
+	overflow: hidden;
+	-webkit-tap-highlight-color: transparent;
+	-moz-user-focus: none;
 
 	&.light {
 		@include light-theme;
@@ -37,25 +40,15 @@ body {
 		width: 100%;
 		height: 100%;
 		overflow-x: hidden;
-
-		.page {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-		}
-
-		.prevPage {
-			position: absolute;
-			height: 100px;
-			width: 100%;
-			z-index: -1;
-		}
+		transition-property: opacity, transform, filter;
+		transition-timing-function: ease-in-out;
+		transition-duration: 0.2s;
 	}
 }
 
-.contentEnter {
-	position: absolute;
-	width: 100%;
-	overflow: hidden;
-	animation: slideIn-right 0.7s ease forwards;
+.transition {
+	opacity: 0;
+	transform: translateY(40px);
+	filter: blur(12px);
+	overflow-y: hidden;
 }

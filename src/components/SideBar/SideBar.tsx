@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./SideBar.module.scss";
 import { useNavLinks } from "@/hooks/useNavLinks";
 import { ToolBtns } from "../ToolBtns/ToolBtns";
 import { ColorPallete } from "../ColorPallete/ColorPallete";
+import { CustomLink } from "../CustomLink/CustomLink";
 
 interface Props {
 	className?: string;
@@ -18,14 +18,14 @@ export const SideBar = ({className, toggleSidebar}: Props) => {
 		<aside className={className}>
 			<nav className={styles.nav}>
 				{navLinks.map(({ href, label, active }) => (
-					<Link
+					<CustomLink
 						key={href}
 						href={href}
-						onClick={toggleSidebar}
+						toggleSidebar={toggleSidebar}
 						className={`${styles["nav__link"]} 
 					${active && styles["nav__link--active"]}`}>
 						{label}
-					</Link>
+					</CustomLink>
 				))}
 			</nav>
 
