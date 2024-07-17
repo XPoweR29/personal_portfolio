@@ -4,6 +4,17 @@
 .projects {
 	@include subpage;
 
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to left, var(--main-color), transparent);
+		opacity: 0.2;
+	}
+
 	.heading {
 		@include subpageHeading;
 	}
