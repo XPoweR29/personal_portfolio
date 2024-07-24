@@ -12,9 +12,12 @@ import { rubikGlitch } from "./fonts";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { LoaderContainer } from "@/components/LoaderContainer/LoaderContainer";
 import { TypeAnimation } from "react-type-animation";
+import { CustomLink } from "@/components/CustomLink/CustomLink";
+import { useAttachment } from "@/hooks/useAttachment";
 
 const App = () => {
 	const { breakpoint } = useBreakpoints();
+	const { handleDownload } = useAttachment();
 
 	return (
 		<LoaderContainer>
@@ -50,8 +53,8 @@ const App = () => {
 					</p>
 
 					<div className={styles.ctaBtns}>
-						<MainBtn filled>Download CV</MainBtn>
-						<MainBtn>Contact Me</MainBtn>
+						<MainBtn onClick={handleDownload} filled>Download CV</MainBtn>
+						<CustomLink className={styles.cvBtn} href="/contact">Contact Me</CustomLink>
 					</div>
 
 					<div className={styles.socialBtns}>

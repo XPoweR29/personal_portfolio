@@ -31,7 +31,6 @@
 		width: 0;
 		background-color: transparent;
 	}
-	
 
 	@media (min-width: 400px) {
 		padding-top: 10em;
@@ -89,4 +88,49 @@
 @mixin mainColored {
 	color: var(--main-color);
 	transition: color 0.5s;
+}
+
+@mixin mainButton {
+	position: relative;
+	padding: 1em 1.2em;
+	border: 2px solid var(--main-color);
+	border-radius: 5px;
+	font-weight: bold;
+	color: var(--font-color);
+	background-color: transparent;
+	overflow: hidden;
+	scale: 1;
+	transition: background-color 0.3s, color 0.3s, scale 0.3s, border-color 0.3s;
+
+	&:hover {
+		background-color: var(--main-color);
+		color: var(--aside-background);
+		scale: 0.95;
+	}
+
+	&--filled {
+		color: var(--aside-background);
+		background-color: var(--main-color);
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 25px;
+			height: 150%;
+			transform: skew(30deg);
+			translate: -170% -50%;
+			background-color: rgba(254, 250, 255, 0.3);
+			transition: translate 0.3s;
+		}
+
+		&:hover {
+			scale: 1.05;
+		}
+
+		&:hover::after {
+			translate: 600% -50%;
+		}
+	}
 }

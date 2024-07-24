@@ -10,13 +10,14 @@ interface Props extends LinkProps {
 	className?: string;
 	toggleSidebar?: () => void;
 	mainContentRef?: React.RefObject<HTMLDivElement>;
+	download?: boolean;
 }
 
 function hold(ms: number): Promise<void> {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export const CustomLink = ({ children, href, toggleSidebar, ...props }: Props) => {
+export const CustomLink = ({ children, href, className, toggleSidebar, download, ...props }: Props) => {
 	const pathname = usePathname();
 	const router = useRouter();
 
@@ -35,7 +36,7 @@ export const CustomLink = ({ children, href, toggleSidebar, ...props }: Props) =
 	};
 
 	return (
-		<Link href={href} {...props} onClick={handleClick}>
+		<Link href={href} {...props} onClick={handleClick} download={download} className={className}>
 			{children}
 		</Link>
 	);

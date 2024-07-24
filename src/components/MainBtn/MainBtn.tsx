@@ -6,12 +6,13 @@ interface Props {
 	filled?: boolean;
 	className?: string;
 	type?: "submit" | "button" | "reset" | undefined;
-    disabled?: boolean;
+	disabled?: boolean;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const MainBtn = ({children, filled, className, type, disabled}: Props) => {
+export const MainBtn = ({children, filled, className, type, disabled, onClick}: Props) => {
     return (
-        <button className={`${className} ${styles.btn} ${filled?styles["btn--filled"]:""}`} type={type} disabled={disabled}>
+        <button onClick={onClick} className={`${className} ${styles.btn} ${filled?styles["btn--filled"]:""}`} type={type} disabled={disabled}>
             {children}
         </button>
     );

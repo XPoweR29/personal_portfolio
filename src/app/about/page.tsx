@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Wrapper from "@/components/Wrapper/Wrapper";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -8,9 +8,11 @@ import photo_2 from "../../../public/assets/photo_2.png";
 import { rubikGlitch } from "../fonts";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { MainBtn } from "@/components/MainBtn/MainBtn";
+import { useAttachment } from "@/hooks/useAttachment";
 
 const About = () => {
-	const {breakpoint} = useBreakpoints();
+	const { breakpoint } = useBreakpoints();
+	const { handleDownload } = useAttachment();
 
 	return (
 		<section className={styles.about}>
@@ -31,7 +33,11 @@ const About = () => {
 					the dynamic world of IT, where I can develop my skills and passion.
 				</p>
 
-				{breakpoint.md && <MainBtn filled className={styles.cvBtn}>Download CV</MainBtn>}
+				{breakpoint.md && (
+					<MainBtn onClick={handleDownload} filled className={styles.cvBtn}>
+						Download CV
+					</MainBtn>
+				)}
 
 				<div className={styles.techStack}>
 					<h2 className={styles.title}>Tech Stack</h2>
