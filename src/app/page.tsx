@@ -11,6 +11,7 @@ import styles from "./Home.module.scss";
 import { rubikGlitch } from "./fonts";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { LoaderContainer } from "@/components/LoaderContainer/LoaderContainer";
+import { TypeAnimation } from "react-type-animation";
 
 const App = () => {
 	const { breakpoint } = useBreakpoints();
@@ -24,7 +25,23 @@ const App = () => {
 					<h1 className={styles.heading}>
 						Hello, my name is{" "}
 						<strong className={rubikGlitch.className}>Paweł.</strong> <br /> I'm
-						a <strong className={rubikGlitch.className}>Web Developer</strong>
+						a{" "}
+						<strong className={rubikGlitch.className}>
+							<TypeAnimation
+								sequence={[
+									"Web Developer.",
+									1500,
+									"Backend Dev.",
+									1500,
+									"Freelancer.",
+									1500,
+								]}
+								wrapper="span"
+								speed={2}
+								repeat={Infinity}
+								className={styles.cursor}
+							/>
+						</strong>
 					</h1>
 					<p className={styles.text}>
 						I create and optimize web applications, ensuring top performance and

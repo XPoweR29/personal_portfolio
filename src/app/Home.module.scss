@@ -33,6 +33,20 @@
 			color: var(--main-color);
 			transition: color 0.3s;
 		}
+
+		.cursor {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				margin-left: 3px;
+				width: 5px;
+				height: 100%;
+				background-color: var(--main-color);
+				transition: color 0.3s;
+			}
+		}
 	}
 
 	.text {

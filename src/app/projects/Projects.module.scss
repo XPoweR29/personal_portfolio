@@ -20,7 +20,7 @@
 	}
 
 	.text {
-		max-width: 50%;
+		max-width: 500px;
 	}
 
 	.atom {
@@ -60,6 +60,15 @@
 			margin-top: 3em;
 		}
 	}
+}
+
+@media(width >= 1400px) {
+	.projects {
+		.text {
+			max-width: 50%;
+		}
+	}
+
 }
 
 @media (min-width: 1400px) and (min-height: 1000px) {
