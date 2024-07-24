@@ -3,7 +3,6 @@
 
 .services {
 	@include subpage;
-	position: relative;
 	padding-bottom: 3em;
 
 	&::before {
