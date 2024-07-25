@@ -17,10 +17,11 @@ export const SideBar = ({className, toggleSidebar}: Props) => {
 	return (
 		<aside className={className}>
 			<nav className={styles.nav}>
-				{navLinks.map(({ href, label, active }) => (
+				{navLinks.map(({ href, label, active, icon }) => (
 					<CustomLink
 						key={href}
 						href={href}
+						icon={icon}
 						toggleSidebar={toggleSidebar}
 						className={`${styles["nav__link"]} 
 					${active && styles["nav__link--active"]}`}>
