@@ -16,7 +16,7 @@ export const ThemeContext = createContext<ContextType | null>(null);
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const [theme, setTheme] = useState<string>("light");
 	const [palleteOpen, setPalleteOpen] = useState<boolean>(false);
-	const [mainColor, setMainColor] = useState<string>("");
+	const [mainColor, setMainColor] = useState<string>("#378cd1");
 
 	useEffect(() => {
 		const storedTheme = localStorage.getItem("theme");
