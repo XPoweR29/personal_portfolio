@@ -10,13 +10,15 @@ import {Toaster} from "react-hot-toast";
 export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
+
 	return (
 		<html lang="en">
 			<head>
-				<title>Personal Portfolio</title>
-				<meta name="description" content="WebDeveloper portfolio" />
+				<link rel="icon" href="/favicon.png" sizes="any" type="image/png"/>
+				<meta name="description" content="Hello, my name is Paweł. I\'m a Web Developer. I create and optimize web applications, ensuring top performance and seamless user experiences." />
 				<link rel="preload" href="/assets/photo_1.webp" as="image" />
 				<link rel="preload" href="/assets/photo_2.png" as="image" />
+				<title>Paweł Żydek | Personal Portfolio</title>
 			</head>
 
 			<ThemeProvider>
@@ -25,7 +27,7 @@ export default function RootLayout({
 						<ContextProvider>
 							<ResponsiveSideBar />
 							<MainContent className="mainContent">{children}</MainContent>
-							<Toaster/>
+							<Toaster />
 						</ContextProvider>
 					</LoaderContainer>
 				</body>
