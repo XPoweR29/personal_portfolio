@@ -1,9 +1,7 @@
 @import "../../sass/variables";
 
-.btn { //FIXME: improve icon position at center!
-	display: flex; 
-	justify-content: center;
-	align-items: center;
+.btn {
+	position: relative;
 	width: 40px;
 	height: 40px;
 	border: 2px solid var(--main-color);
@@ -12,11 +10,15 @@
 	transition: scale 0.2s, border-color 0.3s;
 
 	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		width: 25px;
 		height: 25px;
 	}
 
 	&:hover {
-		scale: 1.07;
+		scale: 1.1;
 	}
 }

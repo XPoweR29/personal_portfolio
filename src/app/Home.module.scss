@@ -73,8 +73,8 @@
 	.photo {
 		position: absolute;
 		bottom: -20px;
-		right: -20px;
-		width: 175px;
+		right: -50px;
+		width: 260px;
 	}
 
 	.atomic {
@@ -118,7 +118,7 @@
 	.home {
 		padding-top: 9em;
 		.photo {
-			width: 220px;
+			width: 320px;
 		}
 	}
 
@@ -139,10 +139,6 @@
 	@media (orientation: portrait) {
 		.home {
 			padding-top: 13em;
-
-			.photo {
-				width: 250px;
-			}
 		}
 	}
 }
@@ -157,7 +153,7 @@
 			}
 
 			.photo {
-				width: 350px;
+				width: 500px;
 				bottom: -25px;
 			}
 
@@ -191,8 +187,7 @@
 			position: absolute;
 			top: 50%;
 			right: 5%;
-			padding-left: 1em;
-			padding-bottom: 2em;
+			padding: 1em;
 			transform: translateY(-50%);
 
 			&::before {
@@ -222,6 +217,7 @@
 			.photo {
 				position: static;
 				width: 300px;
+				filter: saturate(0.3);
 			}
 		}
 
@@ -229,6 +225,16 @@
 			top: 15%;
 			left: 80%;
 			bottom: auto;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.home {
+		.photoContainer {
+			.photo {
+				width: 320px;
+			}
 		}
 	}
 }

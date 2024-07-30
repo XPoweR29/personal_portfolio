@@ -5,7 +5,7 @@ import { MainBtn } from "@/components/MainBtn/MainBtn";
 import { SocialBtn } from "@/components/SocialBtn/SocialBtn";
 import { Icon } from "@iconify/react";
 import photo_2 from "../../public/assets/photo_2.png";
-import photo_1 from "../..//public/assets/photo_1.webp";
+import photo_1 from "../..//public/assets/photo_1.png";
 import atomic from "../../public/assets/atomic.png";
 import styles from "./Home.module.scss";
 import { rubikGlitch } from "./fonts";
