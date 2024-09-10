@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import background from "../../../public/assets/background.png";
+import background from "../../../public/assets/background.webp";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useContext } from "react";
 import styles from "./ProjectCard.module.scss";

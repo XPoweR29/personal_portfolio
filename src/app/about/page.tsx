@@ -4,7 +4,7 @@ import Wrapper from "@/components/Wrapper/Wrapper";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import styles from "./About.module.scss";
 import waves from "../../../public/assets/waves.webp";
-import photo_2 from "../../../public/assets/photo_2.png";
+import photo_2 from "../../../public/assets/photo_2.webp";
 import { rubikGlitch } from "../fonts";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { MainBtn } from "@/components/MainBtn/MainBtn";

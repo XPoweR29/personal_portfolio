@@ -3,9 +3,9 @@
 import Wrapper from "@/components/Wrapper/Wrapper";
 import styles from "./Projects.module.scss";
 import atom from "../../../public/assets/projects_atom.webp";
-import adona_mockup from "../../../public/assets/mockup_adona.png";
-import kwatery_mockup from "../../../public/assets/mockup_kwatery.png";
-import portfolio_mockup from "../../../public/assets/mockup_portfolio.png";
+import adona_mockup from "../../../public/assets/mockup_adona.webp";
+import kwatery_mockup from "../../../public/assets/mockup_kwatery.webp";
+import portfolio_mockup from "../../../public/assets/mockup_portfolio.webp";
 import { rubikGlitch } from "../fonts";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { useBreakpoints } from "@/hooks/useBreakpoints";

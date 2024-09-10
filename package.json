@@ -11,6 +11,7 @@
 		"typecheck": "tsc --noEmit",
 		"prepare": "husky"
 	},
+	"type": "module",
 	"dependencies": {
 		"@formspree/react": "^2.5.1",
 		"dotenv": "^16.4.5",
@@ -18,16 +19,23 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"react-hot-toast": "^2.4.1",
-		"react-type-animation": "^3.2.0"
+		"react-type-animation": "^3.2.0",
+		"sharp": "^0.33.4"
 	},
 	"devDependencies": {
 		"@iconify/react": "^5.0.1",
+		"@types/imagemin": "^9.0.0",
+		"@types/imagemin-webp": "^7.0.3",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
 		"eslint": "^8",
 		"eslint-config-next": "14.2.3",
 		"husky": "^9.0.11",
+		"imagemin": "^9.0.0",
+		"imagemin-mozjpeg": "^10.0.0",
+		"imagemin-pngquant": "^10.0.0",
+		"imagemin-webp": "^8.0.0",
 		"lint-staged": "^15.2.5",
 		"sass": "^1.77.4",
 		"typescript": "^5"
